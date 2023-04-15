@@ -1,0 +1,178 @@
+.carousel {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.image-row {
+  width: 350px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.row-left {
+  margin-left: 10%;
+}
+
+.row-right {
+  margin-right: 10%;
+}
+
+.row-center {
+  justify-content: center;
+}
+
+.l {
+  align-items: flex-end;
+}
+
+.r {
+  align-items: flex-start;
+}
+
+.info {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 2vh;
+  margin: 1vw;
+}
+
+.info p {
+  text-align: justify;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.stats {
+  padding: 2%;
+}
+
+.stats .row {
+  justify-content: space-around;
+}
+
+.stats .row div {
+  display: flex;
+  align-items: center;
+}
+
+.stats-info {
+  min-width: 300px;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.stats-img {
+  margin-right: 1vw;
+  width: 50%;
+}
+
+.stats h2,
+.titulo {
+  font-size: xx-large;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.thankYou {
+  width: 5%;
+}
+
+.parrafo {
+  margin-top: 2vw;
+  text-align: justify;
+  margin-right: 2vw;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+  .info {
+    width: auto;
+  }
+
+  .caroussel {
+    display: none;
+  }
+
+  .carousel {
+    width: 0;
+  }
+
+  .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .row-left {
+    margin-left: 0;
+  }
+
+  .row-right {
+    margin-right: 0;
+  }
+
+  .stats-info {
+    min-width: 250px;
+  }
+
+  .stats-img {
+    width: auto;
+  }
+
+  .stats .column .row {
+    margin: 0;
+  }
+
+  .row {
+    margin: 2vh 0;
+  }
+
+  .row div {
+    margin: 2vh 0 2vh 0;
+  }
+
+  .image-row {
+    width: 350px;
+    height: 400px;
+  }
+
+  .thankYou {
+    width: 12%;
+  }
+}
+
+@media screen and (max-width: 391px) {
+  .info {
+    width: auto;
+    padding: 0;
+  }
+
+  .background {
+    display: none;
+  }
+  .row {
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,210 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/dropdown";
+@import "../../../node_modules/bootstrap/scss/nav";
+@import "../../../node_modules/bootstrap/scss/navbar";
+@import "../../../node_modules/bootstrap/scss/transitions";
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  background-color: green;
+  margin-bottom: 3vh;
+}
+
+.nav a {
+  padding: 0;
+  margin: 0 1vw;
+}
+
+#basic-nav-dropdown {
+  padding: 0;
+  color: white;
+}
+
+.header-nav-links-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+}
+
+.logo {
+  margin-left: 1vw;
+  display: flex;
+}
+
+.logo-img {
+  width: 4vw;
+  border-radius: 50%;
+  padding: 10px 10px;
+  min-width: 3vw;
+}
+
+.navigation {
+  margin-right: auto;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  display: inline;
+  margin: 0.8vw;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
+  font-size: 1.35rem;
+}
+
+.links:visited {
+  color: white;
+}
+
+.links:hover {
+  font-weight: bold;
+}
+
+.active {
+  font-weight: bold;
+  font-size: 1.35rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .logo-img {
+    width: 10vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo-img {
+    width: 12vw;
+    padding: 0;
+  }
+
+  .navbar-brand {
+    margin: 0 5vw;
+    padding: 0;
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 2rem;
+}
+
+header .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+
+header div,
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.dropdown {
+  margin: 0.8vw;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: 0px;
+  color: white;
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: green;
+  top: 30px;
+  border-radius: 1vh;
+  z-index: 99;
+}
+
+@media only screen and (max-width: 1024px) {
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  .dropdown:hover .dropdown-content {
+    flex-direction: column;
+    position: initial;
+  }
+  .dropdown {
+    flex-direction: column;
+  }
+  header .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
+
+  header .responsive_nav {
+    transform: none;
+    background-color: green;
+    z-index: 99;
+  }
+
+  .nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .nav a {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 920px) {
+}

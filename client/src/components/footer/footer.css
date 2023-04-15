@@ -1,0 +1,53 @@
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgb(226, 226, 226);
+  padding: 1%;
+  margin-top: 3%;
+}
+
+.dedication {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 1.5rem;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  color: green;
+  transition: all 0.1s ease;
+}
+
+.icons-link {
+  margin-top: 0.5vh;
+}
+
+.icons-footer {
+  margin: 0.5vw;
+}
+
+.icon:hover {
+  color: rgb(0, 176, 0);
+}
+
+@media screen and (max-width: 1100px) {
+  footer {
+    flex-direction: column;
+  }
+
+  footer div {
+    margin: 1vh 0;
+  }
+
+  .dedication {
+    margin: 0;
+    text-align: center;
+  }
+}

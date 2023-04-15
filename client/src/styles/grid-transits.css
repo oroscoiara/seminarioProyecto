@@ -1,0 +1,21 @@
+.grid-transit {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: stretch;
+  padding-left: 3vw;
+}
+
+@media (max-width: 1024px) {
+  .grid-transit {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-transit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+}

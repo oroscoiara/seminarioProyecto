@@ -1,0 +1,89 @@
+Obtener todas las publicaciones de Adopciones no finalizadas
+Método: GET
+Endpoint: http://localhost:8080/api/publicaciones/adopciones
+
+Obtener todas las publicaciones de Adopciones no finalizadas con la totalidad de los datos
+Método: GET
+Endpoint: http://localhost:8080/api/publicaciones/adopciones/fullView
+
+Obtener una publicacion de Adopcion en particular (ID)
+Método: GET
+Endpoint: http://localhost:8080/api/publicaciones/adopciones/id
+
+Obtener todas las publicaciones de Adopciones urgentes
+Método: GET
+Endpoint: http://localhost:8080/api/publicaciones/adopciones/urgentes
+
+Obtener todas las publicaciones de Adopciones que estén dentro del radio del colaborador
+Método: GET
+Endpoint: http://localhost:8080/api/publicaciones/adopciones/distance
+Headers (JSON):
+    longitud: <longitud colaborador>
+    latitud: <latitud colaborador>
+
+Cambiar estado a una publicacion de Adopcion en particular (ID)
+Método: PUT
+Endpoint: http://localhost:8080/api/publicaciones/adopciones/{id}/cambiarEstado
+Body (Text/JSON): --> IMPORTANTE: SIN COMILLAS! PRIMERA LETRA MAYUS, RESTO MINUS
+    En proceso
+
+
+Cambiar urgencia a una publicacion de Adopcion en particular (ID)
+Método: PUT
+Endpoint: http://localhost:8080/api/publicaciones/adopciones/{id}/cambiarUrgencia
+Body (JSON):
+    true
+
+Crear una publicacion de adopcion
+Método: POST
+Endpoint: http://localhost:8080/api/publicaciones/adopciones
+Body:
+{
+    "descripcion":"Luke es pequeño y mimoso",
+    "idAnimal":8,
+    "idRefugio":34,
+    "necesitaPatio":true,
+    "puedeConvivirConInfantes":true,
+    "puedeConvivirConGatos":true,
+    "puedeConvivirConCachorros":true,
+    "puedeConvivirConPerrosAdultos":true,
+    "requiereHogarAmplio":true,
+    "transporteCubierto":true,
+    "esUrgente":false,
+    "fechaPublicacion":"09/09/2022",
+    "estado":"En proceso"
+}
+
+Modificar una publicacion de adopcion
+Método: PUT
+Endpoint: http://localhost:8080/api/publicaciones/adopciones
+Body:
+{
+    "idPublicacion": 19
+    "descripcion":"Luke es pequeño y mimoso",
+    "idAnimal":8,
+    "idRefugio":34,
+    "necesitaPatio":true,
+    "puedeConvivirConInfantes":true,
+    "puedeConvivirConGatos":true,
+    "puedeConvivirConCachorros":true,
+    "puedeConvivirConPerrosAdultos":true,
+    "requiereHogarAmplio":true,
+    "transporteCubierto":true,
+    "esUrgente":false,
+    "fechaPublicacion":"09/09/2022",
+    "estado":"En proceso"
+}
+
+Postularse a una publicacion de adopcion
+Metodo: POST
+Endpoint: http://localhost:8080/api/publicaciones/adopciones/{id}/postular
+Body:
+{
+    "nombre":"Juan",
+    "apellido":"Doe",
+    "telefono":"1123456789",
+    "direccion":"Lima 557",
+    "correo":"juan.doe@gmial.com",
+    "notas":"Me gustan mucho los pichichos"
+}

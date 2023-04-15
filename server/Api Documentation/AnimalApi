@@ -1,0 +1,17 @@
+Obtener todos los Animales
+Metodo: GET
+Endpoint: http://localhost:8080/api/animales
+
+Crear un Animal
+Metodo: POST
+Endpoint: http://localhost:8080/api/animales
+Body: {
+          "nombre":"Patin",
+          "tamanioActual":"Mediano",
+          "tamanioEsperado":"Mediano",
+          "fechaNac":"20/01/2022",
+          "tipoAnimal":"Gato",
+          "castrado":false,
+          "esquemaCompletoVacunas":true,
+          "desparasitado":true
+      }
